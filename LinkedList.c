@@ -1,16 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 struct point {
     int x;
     int y;
     struct point* next;
 };
+
 void printPoints(struct point* start);
 struct point* createPoint(int x, int y);
 struct point* append(struct point* end, struct point* newpt);
 void freePoints(struct point* start);
+
 int main(void) {
-    //! showMemory(start=65520)
     struct point* start, * end, * newpt;
     int num, i;
     int x, y;
@@ -37,7 +39,6 @@ int main(void) {
 }
 
 void printPoints(struct point* start) {
-    //! showMemory(start = 65520, cursors=[ptr])
     struct point* ptr;
     ptr = start;
     while (ptr != NULL) {
